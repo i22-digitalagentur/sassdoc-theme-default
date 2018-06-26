@@ -6,6 +6,9 @@
       {{ project_title }}{% if package.version %} - {{ package.version }}{% endif %}
     {% endif %}
   </h1>
+  <div class="brand-logo">
+    <img src="assets/images/logo.png" />
+  </div>
 </div>
 
 <div class="sidebar__body">

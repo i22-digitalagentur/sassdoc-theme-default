@@ -2,6 +2,8 @@
  * Sidebar
  */
 .sidebar {
+  background: #fff;
+  
   @include respond-to('medium') {
     @include fixed($top: 0, $bottom: 0, $left: 0);
     overflow: auto;
@@ -108,7 +110,18 @@ $level-3: $level-2 + 2em;
  * Sidebar header with title
  */
 .sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid $light-grey;
+
+  .brand-logo {
+    width: 4rem;
+
+    img {
+      max-width: 100%;
+    }
+  }
 }
 
 /**

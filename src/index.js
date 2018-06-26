@@ -1,14 +1,11 @@
 import def from '../default'
-import { Promise } from 'es6-promise'
-import es6denodeify from 'es6-denodeify'
 import extend from 'extend'
 import fs from 'fs-extra'
 import { minify } from 'html-minifier'
 import path from 'path'
 import sassdocExtras from 'sassdoc-extras'
+import denodeify from 'denodeify'
 import swig from './swig'
-
-const denodeify = es6denodeify(Promise)
 
 const copy = denodeify(fs.copy)
 const renderFile = denodeify(swig.renderFile)

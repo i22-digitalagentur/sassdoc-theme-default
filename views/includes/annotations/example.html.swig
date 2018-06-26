@@ -7,6 +7,10 @@
     <div class="example__description">{{ example.description|safe }}</div>
     {% endif %}
     <pre class="example__code  language-{{ example.type }}"><code>{{ example.code|escape|safe }}</code></pre>
+    <div>
+      {{ styleSheet }}
+      {{ example.code | raw }}
+    </div>
   </div>
   {% endfor %}
 {% endif %}
